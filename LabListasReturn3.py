@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Oct  9 21:45:05 2022
+Created on Sun Oct  9 22:22:15 2022
 
 @author: Alexander
 """
@@ -18,9 +18,12 @@ def daysInMonth(year, month):
         else:
             dias = [31,28,31,30,31,30,31,31,30,31,30,31]
             return (str(year),"->",str(dias[month-1]))
-    except:
+    except :
         return None
-       
 
-print(daysInMonth(2021, 11))
-
+def dayOfYear(year, month, day):
+    if (isYearLeap(year)):
+        return 366
+    else:
+        return 365
+print(dayOfYear(2000, 12, 31))
